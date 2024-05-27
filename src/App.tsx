@@ -1,7 +1,10 @@
 function App() {
 
+  const tipPercentages = [5, 10, 15, 25, 50];
 
   return (
+
+    
     <>
       <h1 className="text-center flex flex-col text-very-dark-cyan ">S P L I <span>T T E R</span> </h1>
       <div className="bg-white rounded-lg px-8">
@@ -19,61 +22,41 @@ function App() {
         <div >
           <p>select tip %</p>
           <div className="grid grid-cols-2">
-            <div>
-              5
-            </div>
-            <div>
-              10
-            </div>
-            <div>
-              15
-            </div>
-            <div>
-              25
-            </div>
-            <div>
-              50
-            </div>
-            <div>
-              Custom
-            </div>
+          {tipPercentages.map((percentage) => (
+            <p>{percentage}</p>
+          ))}
           </div>
         </div>
 
         <div>
-          <p>number of people</p>
           <form action="">
-            <label htmlFor="">Bill</label>
-            <div className="bg-very-light-grayish-cyan flex justify-between mx-8 px-5">
-              <img src="/images/icon-person.svg" alt="" />
-              <input className="bg-very-light-grayish-cyan" type="text" />
+            <label htmlFor="" className="text-dark-grayish-cyan">Number of people %</label>
+            <div className="bg-very-light-grayish-cyan flex justify-between px-5 rounded-lg items-center h-12">
+              <img className="w-[13px] h-[16px]" src="/images/icon-person.svg" alt="" />
+              <input className="bg-very-light-grayish-cyan text-right text-very-dark-cyan font-bold text-2xl max-w-[150px]" type="number" />
             </div>
           </form>
         </div>
 
-        <div className="bg-very-dark-cyan rounded-xl">
-          <div className="flex">
+        <div className="bg-very-dark-cyan rounded-xl p-6">
+          <div className="flex justify-between">
             <div className="">
-              <p>tip amount</p>
-              <p>//person</p>
+              <p className="text-white font-bold">tip amount</p>
+              <p className="text-grayish-cyan">/person</p>
             </div>
-            <p>$4.56</p>
+            <p className="text-3xl text-strong-cyan font-bold">$4.56</p>
           </div>
 
-          <div className="flex">
+          <div className="flex justify-between">
             <div>
-              <p>total</p>
-              <p>//person</p>
+              <p className="text-white font-bold">total</p>
+              <p className="text-grayish-cyan">/person</p>
             </div>
-            <p>$4.56</p>
+            <p className="text-3xl text-strong-cyan font-bold">$4.56</p>
           </div>
 
-          <button className="bg-strong-cyan">Reset</button>
+          <button className="bg-strong-cyan text-center rounded-lg w-[281px] h-12">Reset</button>
         </div>
-
-
-
-
       </div>
     </>
   )
