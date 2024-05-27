@@ -6,4 +6,14 @@
     html {
         font-family: "Space Mono", monospace;
     }
-}   
+}
+/* Eliminate the buttons in the inputs with type "number" */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}

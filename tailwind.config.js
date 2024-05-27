@@ -13,7 +13,8 @@ export default {
       "grayish-cyan": "#7F9C9F",
       "light-grayish-cyan": "#C5E4E7",
       "very-light-grayish-cyan": "#F4FAFA",
-      "white": "#FFF"
+      "white": "#FFF",
+      "red": "#E17457"
 
     },
     plugins: [],
